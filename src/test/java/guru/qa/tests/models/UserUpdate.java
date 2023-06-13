@@ -1,11 +1,12 @@
-package tests.models;
+package guru.qa.tests.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class BadRequestResponse {
+public class UserUpdate {
 
-    private String error;
+    String name;
+    String job;
 }

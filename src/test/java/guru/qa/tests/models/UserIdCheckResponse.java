@@ -1,12 +1,11 @@
-package tests.models;
+package guru.qa.tests.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class RegisterResponse {
+public class UserIdCheckResponse {
 
-    private Integer id;
-    private String token;
+    User data;
 }
