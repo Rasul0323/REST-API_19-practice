@@ -9,18 +9,18 @@ public class EditProfileTest extends TestBase {
 
     @Test
     void editUserProfileTest(){
-        String valueId = "3116110",
-                valueFirstName = "John",
-                valueLastName = "Ivanov",
-                valueEmail = "ivanov@test.ru",
-                valueCompany = "Test",
+        String valueId = "3121228",
+                valueFirstName = "Eduard",
+                valueLastName = "Tibov",
+                valueEmail = "rasul@mail.ru",
+                valueCompany = "Dom",
                 valueCountryId = "66",
                 valueStateProvinceId = "0",
-                valueCity = "Moscow",
+                valueCity = "Stavropole",
                 valueAddress1 = "Lenina",
-                valueAddress2 = "RedSquare",
-                valueZipPostalCode = "345",
-                valuePhoneNumber = "777888",
+                valueAddress2 = "Mira",
+                valueZipPostalCode = "562014",
+                valuePhoneNumber = "583902",
                 valueFaxNumber = "";
 
         String authCookieValue = authApi.getAuthCookie(login,password);
@@ -42,7 +42,7 @@ public class EditProfileTest extends TestBase {
                 .formParam("Address.PhoneNumber", valuePhoneNumber)
                 .formParam("Address.FaxNumber", valueFaxNumber)
                 .when()
-                .post("/customer/addressedit/3116110")
+                .post("/customer/addressedit/3121228")
                 .then()
                 .log().all()
                 .assertThat()
