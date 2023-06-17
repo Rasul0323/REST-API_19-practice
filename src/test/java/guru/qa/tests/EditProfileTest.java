@@ -1,14 +1,13 @@
 package guru.qa.tests;
 
 import org.junit.jupiter.api.Test;
-
 import static guru.qa.tests.helpers.AuthApi.authCookieKey;
 import static io.restassured.RestAssured.given;
 
 public class EditProfileTest extends TestBase {
 
     @Test
-    void editUserProfileTest(){
+    void editUserProfileTest() {
         String valueId = "3121228",
                 valueFirstName = "Eduard",
                 valueLastName = "Tibov",
@@ -23,11 +22,11 @@ public class EditProfileTest extends TestBase {
                 valuePhoneNumber = "583902",
                 valueFaxNumber = "";
 
-        String authCookieValue = authApi.getAuthCookie(login,password);
+        String authCookieValue = authApi.getAuthCookie(login, password);
 
         given()
                 .contentType("application/x-www-form-urlencoded")
-                .cookie(authCookieKey,authCookieValue)
+                .cookie(authCookieKey, authCookieValue)
                 .formParam("Address.Id", valueId)
                 .formParam("Address.FirstName", valueFirstName)
                 .formParam("Address.LastName", valueLastName)
